@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
+import { assets } from "@/assets/assets";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,11 +21,7 @@ const Navbar = () => {
   return (
     <nav className="h-[70px] sticky top-0 z-50 w-full px-6 md:px-16 lg:px-24 xl:px-32 flex items-center justify-between bg-white text-gray-700 shadow-[0px_4px_25px_0px_#0000000D] transition-all">
       <Link to="/">
-        <img
-          className="h-9"
-          src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/dummyLogo/dummyLogoColored.svg"
-          alt="Company Logo"
-        />
+        <img className="h-9" src={assets.logo} alt="Company Logo" />
       </Link>
 
       {/* Desktop Navigation */}
@@ -45,9 +42,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <Button
-        className="bg-white cursor-pointer text-gray-600 border border-gray-300 md:inline hidden text-sm hover:bg-gray-50 active:scale-95 transition-all w-40 h-11 rounded-full"
-      >
+      <Button className="bg-blue-600 cursor-pointer text-white md:inline hidden text-sm hover:bg-blue-500 active:scale-95 transition-all w-40 h-11 rounded-full">
         Get started
       </Button>
 
@@ -85,9 +80,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <Button
-        // className="bg-white text-gray-600 border border-gray-300 mt-6 text-sm hover:bg-gray-50 active:scale-95 transition-all w-40 h-11 rounded-full"
-        >
+        <Button className="bg-blue-600 cursor-pointer text-white inline md:hidden text-sm hover:bg-blue-500 active:scale-95 transition-all w-40 h-11 rounded-full">
           Get started
         </Button>
       </div>

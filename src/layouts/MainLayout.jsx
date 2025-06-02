@@ -7,7 +7,7 @@ const MainLayout = () => {
   return (
     <div>
       <Navbar />
-      <main className="overflow-x-hidden">
+      <main className="md:w-[83%] mx-auto overflow-x-hidden">
         <Outlet />
       </main>
       <Fotter />
